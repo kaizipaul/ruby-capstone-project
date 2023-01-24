@@ -1,12 +1,15 @@
 require_relative './musicalbum'
+require_relative './gaming_methods'
 require 'json'
 
 class App
-  attr_accessor :album_list, :genre_list
+  attr_accessor :album_list, :genre_list, :game_list, :author_list
 
   def initialize()
     @music_list = []
     @genre_list = []
+    @game_list = []
+    @author_list = []
   end
 
   def music_display
@@ -19,6 +22,18 @@ class App
 
   def music_create
     create_album
+  end
+  
+  def game_display
+    show_games
+  end
+
+  def game_create
+    create_game
+  end
+
+  def author_display
+    show_authors
   end
 
   def save_files

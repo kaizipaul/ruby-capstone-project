@@ -9,8 +9,8 @@ CREATE TABLE game (
 
 -- Author class table
 CREATE TABLE author (
-	id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   item_id INT FOREIGN KEY REFERENCES item(id),
-	first_name VARCHAR,
-	last_name VARCHAR
+  first_name VARCHAR,
+  last_name VARCHAR
 );

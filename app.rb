@@ -36,6 +36,43 @@ class App
     show_authors
   end
 
+  def book_display
+    puts 'books Listed'
+  end
+
+  def label_display
+    puts 'Label Listed'
+  end
+
+  def book_create
+    label = add_label('Book')
+    author = add_author
+    genre = add_genre('book')
+    print 'What\'s the state of the Book Cover? [good/bad]: '
+    cover_state = gets.chomp.downcase
+    print 'Insert Book Publisher? '
+    publisher = gets.chomp
+    print 'Insert Publishing date? [year/month/day] (e.g 1937/11/12): '
+    published_date = gets.chomp
+    book = Book.new(publisher, cover_state, published_date)
+    label.add_item(book)
+    genre.add_item(book)
+    author.add_item(book)
+    @books << book
+    @labels << label
+    @genres << genre
+    @authors << author
+    puts "\n The book '#{label.title}' by #{author.first_name} #{author.last_name} was created successfully!✅ "
+  end
+
+  def add_label(thing)
+    print "Title of the #{thing}: "
+    title = gets.chomp
+    print "Color of the #{thing}: "
+    color = gets.chomp
+    Label.new(title, color)
+  end
+
   def save_files
     instance_variables.each do |var|
       file_name = var.to_s.chomp('_list').delete('@')

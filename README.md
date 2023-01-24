@@ -97,7 +97,10 @@ Example command:
 - GitHub: [GitHub](https://github.com/AbayomiOlaoye)
 
 👤 **Jonah Wambua**
-- GitHub: [GitHub](https://github.com/DJ-MrJay)
+
+- GitHub [link](https://github.com/DJ-MrJay)
+- Twitter [link](https://twitter.com/jonah_wambua)
+- LinkedIn [link](https://www.linkedin.com/in/jonah-wambua/)
 
 👤 **Paul Kaizirege Vedasto**
 

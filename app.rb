@@ -23,7 +23,7 @@ class App
   def music_create
     create_album
   end
-  
+
   def game_display
     show_games
   end

@@ -1,4 +1,4 @@
-require_relative 'json_creation'
+# require_relative 'json_creation' - This files is raising an error from my side because it hasn't been created
 
 def display_menu(app)
   puts "\nWelcome to our Catalog!"

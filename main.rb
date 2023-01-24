@@ -1,3 +1,4 @@
+require_relative './app'
 require_relative './menu'
 
 def main
@@ -5,7 +6,7 @@ def main
   Dir.exist?('./storage') ? app.read_files : nil
   Dir.exist?('./storage') ? app.read_files2 : nil
   loop do
-    display_menu(app)
+    menu(app)
   end
 end
 

@@ -1,6 +1,7 @@
-# require_relative 'json_creation' - This files is raising an error from my side because it hasn't been created
+require_relative './musicalbum'
+require_relative './json_creation'
 
-def display_menu(app)
+def menu(app)
   puts "\nWelcome to our Catalog!"
   puts "\nPlease choose a task by entering a number:"
   puts " 1 - For listing items\n 2 - For adding items\n 3 - Exit App"
@@ -26,13 +27,13 @@ def for_listing(app)
   when '1'
     app.book_display
   when '2'
-    app.music_display
+    app.album_display
   when '3'
     app.game_display
   when '4'
     display_next(app)
   when '5'
-    display_menu(app)
+    menu(app)
   when '6'
     exit_app(app)
   else
@@ -55,7 +56,7 @@ def display_next(app)
   when '4'
     for_listing(app)
   when '5'
-    display_menu(app)
+    menu(app)
   when '6'
     exit_app(app)
   else
@@ -72,11 +73,11 @@ def for_adding(app)
   when '1'
     app.book_create
   when '2'
-    app.music_create
+    app.album_create
   when '3'
     app.game_create
   when '4'
-    display_menu(app)
+    menu(app)
   when '5'
     exit_app(app)
   end

@@ -9,7 +9,7 @@ class App
     @game_list = []
     @author_list = []
   end
-# *****************************
+  # *****************************
 
   def game_display
     show_games

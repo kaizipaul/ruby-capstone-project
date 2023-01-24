@@ -1,4 +1,5 @@
 require_relative './gaming_methods'
+require 'json'
 
 class App
   attr_accessor :game_list, :author_list

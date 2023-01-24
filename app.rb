@@ -5,12 +5,11 @@ class App
   attr_accessor :album_list, :genre_list
 
   def initialize()
-    @album_list = []
-    @label_list = []
+    @music_list = []
     @genre_list = []
   end
 
-  def album_display
+  def music_display
     list_album
   end
 
@@ -18,7 +17,7 @@ class App
     list_genres
   end
 
-  def album_create
+  def music_create
     create_album
   end
 
@@ -42,7 +41,7 @@ class App
         case file_name
         when 'music'
           read_music(ary)
-        
+        end
       else
         File.write("./storage/#{file_name}.json", '[]')
       end
@@ -61,6 +60,30 @@ class App
       else
         File.write("./storage/#{file_name}.json", '[]')
       end
+    end
+  end
+
+  def read_music(file)
+    puts
+    puts 'MUSIC ALBUMS'
+    puts
+    file.each do |el|
+      music_id = el['value']['id']
+      music_archived = el['value']['archived']
+      music_on_spotify = el['value']['on_spotify']
+      music_publish_date = el['value']['publish_date']
+      puts "ID: #{music_id} On Spotify: #{music_on_spotify} Published on: #{music_publish_date}  Archived: #{music_archived}" # rubocop:disable Layout/LineLength
+      add_music(music_on_spotify, music_publish_date)
+    end
+  end
+
+  def read_genre(file)
+    puts
+    puts 'GENRES'
+    puts
+    file.each do |el|
+      genre_name = el['value']['name']
+      puts "Genre Name: #{genre_name}"
     end
   end
 

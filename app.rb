@@ -1,11 +1,12 @@
 require_relative './gaming_methods'
 
 class App
-  attr_accessor :game_list
+  attr_accessor :game_list, :author_list
 
   # Constructor for App methods
   def initialize()
     @game_list = []
+    @author_list = []
   end
 # *****************************
 
@@ -15,5 +16,9 @@ class App
 
   def game_create
     create_game
+  end
+
+  def author_display
+    show_authors
   end
 end

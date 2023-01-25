@@ -156,7 +156,11 @@ class App
       game_multiplayer = el['value']['multiplayer']
       game_last_played_at = el['value']['last_played_at']
       game_publish_date = el['value']['publish_date']
-      puts "ID: #{game_id} Multiplayer: #{game_multiplayer} Last Played on: #{game_last_played_at} Published on: #{game_publish_date}  Archived: #{game_archived}" # rubocop:disable Layout/LineLength
+      puts "ID: #{game_id}"
+      puts "Multiplayer: #{game_multiplayer}"
+      puts "Last Played on: #{game_last_played_at}"
+      puts "Published on: #{game_publish_date}"
+      puts Archived: "#{game_archived}"
       add_game(game_multiplayer, game_last_played_at, game_publish_date)
     end
   end

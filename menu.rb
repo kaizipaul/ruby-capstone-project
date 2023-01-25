@@ -3,8 +3,8 @@ require_relative './json_creation'
 
 def menu(app)
   puts "\nWelcome to our Catalog!"
-  puts "\nPlease choose a task by entering a number:"
-  puts " 1 - For listing items\n 2 - For adding items\n 3 - Exit App"
+  puts "\nPlease choose a task (1, 2, or 3):"
+  puts " 1 - List items\n 2 - Add items\n 3 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
@@ -20,14 +20,14 @@ end
 
 def for_listing(app)
   puts "\nWelcome to our Catalog!"
-  puts "\nPlease select a number for listing items"
-  puts " 1 - List all books\n 2 - List all music albums\n 3 - List all games\n 4 - For next menu\n 5 - Back to main\n 6 - Exit App" # rubocop:disable Layout/LineLength
+  puts "\nPlease select a number option"
+  puts " 1 - List all books\n 2 - List all music albums\n 3 - List all games\n 4 - Next menu\n 5 - Back to main menu\n 6 - Exit App" # rubocop:disable Layout/LineLength
   choice = gets.chomp
   case choice
   when '1'
     app.book_display
   when '2'
-    app.album_display
+    app.music_display
   when '3'
     app.game_display
   when '4'
@@ -73,7 +73,7 @@ def for_adding(app)
   when '1'
     app.book_create
   when '2'
-    app.album_create
+    app.music_create
   when '3'
     app.game_create
   when '4'

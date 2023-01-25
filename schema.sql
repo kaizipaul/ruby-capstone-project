@@ -41,3 +41,23 @@ CREATE TABLE author (
   first_name VARCHAR,
   last_name VARCHAR
 );
+
+
+-- Books
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  publisher VARCHAR,
+  cover_state VARCHAR,
+  genre_id INT NULL REFERENCES genres(id) ON DELETE CASCADE,
+  author_id INT NULL REFERENCES authors(id) ON DELETE CASCADE,
+  label_id INT NULL REFERENCES labels(id) ON DELETE CASCADE,
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL
+);
+
+-- Labels
+CREATE TABLE labels (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(150) NOT NULL,
+  color VARCHAR(150) NOT NULL
+);

@@ -93,6 +93,8 @@ class App
         case file_name
         when 'music'
           read_music(ary)
+        when 'game'
+          read_game(ary)
         end
       else
         File.write("./storage/#{file_name}.json", '[]')
@@ -108,6 +110,8 @@ class App
         case file_name
         when 'genre'
           read_genre(ary)
+        when 'author'
+          read_author(ary)
         end
       else
         File.write("./storage/#{file_name}.json", '[]')

@@ -8,4 +8,6 @@ def create_files
   Dir.mkdir('./storage')
   FileUtils.touch('./storage/music.json')
   FileUtils.touch('./storage/genre.json')
+  FileUtils.touch('./storage/game.json')
+  FileUtils.touch('./storage/author.json')
 end

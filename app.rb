@@ -13,7 +13,7 @@ class App
   end
 
   def music_display
-    list_album
+    list_music
   end
 
   def genre_display
@@ -21,7 +21,7 @@ class App
   end
 
   def music_create
-    create_album
+    create_music
   end
 
   def game_display
@@ -124,7 +124,10 @@ class App
       music_archived = el['value']['archived']
       music_on_spotify = el['value']['on_spotify']
       music_publish_date = el['value']['publish_date']
-      puts "ID: #{music_id} On Spotify: #{music_on_spotify} Published on: #{music_publish_date}  Archived: #{music_archived}" # rubocop:disable Layout/LineLength
+      puts "ID: #{music_id}"
+      puts "On Spotify: #{music_on_spotify}"
+      puts "Published on: #{music_publish_date}"
+      puts "Archived: #{music_archived}"
       add_music(music_on_spotify, music_publish_date)
     end
   end

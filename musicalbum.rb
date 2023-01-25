@@ -26,7 +26,12 @@ def list_music
     puts 'Music list is empty'
   else
     @music_list.each_with_index do |music, index|
-      puts "(#{index}) ID: #{music.id} On Spotify: \"#{music.on_spotify}\", Publish Date: #{music.publish_date} Archived: #{music.archived}" # rubocop:disable Layout/LineLength
+      puts
+      puts "(#{index})"
+      puts "ID: #{music.id}"
+      puts "On Spotify: #{music.on_spotify}"
+      puts "Publish Date: #{music.publish_date}"
+      puts "Archived: #{music.archived}"
     end
   end
 end
@@ -34,7 +39,7 @@ end
 def create_music
   puts 'Is it on spotify? [y/n]: '
   on_spotify = gets.chomp
-  puts 'Please state when was the music published [yyyy/mm/dd]:'
+  puts 'Please state when was the music published [dd/mm/yyyy]:'
   publish_date = gets.chomp
   print 'Music Album Added Succesfully'
   new_music = MusicAlbum.new(on_spotify, publish_date)

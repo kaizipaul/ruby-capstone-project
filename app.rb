@@ -160,7 +160,7 @@ class App
       puts "Multiplayer: #{game_multiplayer}"
       puts "Last Played on: #{game_last_played_at}"
       puts "Published on: #{game_publish_date}"
-      puts Archived: "#{game_archived}"
+      puts "Archived: #{game_archived}"
       add_game(game_multiplayer, game_last_played_at, game_publish_date)
     end
   end

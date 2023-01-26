@@ -1,9 +1,9 @@
 require_relative './gaming_methods'
 
 def read_game(file)
-  puts 
+  puts
   puts '=====================      GAMES     ====================='
-  puts 
+  puts
   file.each do |el|
     game_id = el['value']['id']
     game_archived = el['value']['archived']

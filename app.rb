@@ -1,5 +1,7 @@
 require_relative './musicalbum'
 require_relative './gaming_methods'
+require_relative './book_methods'
+require_relative './label'
 require 'json'
 
 class App
@@ -10,6 +12,8 @@ class App
     @genre_list = []
     @game_list = []
     @author_list = []
+    @book_list = []
+    @label_list = []
   end
 
   def music_display
@@ -37,32 +41,15 @@ class App
   end
 
   def book_display
-    puts 'books Listed'
+    book_list
   end
 
   def label_display
-    puts 'Label Listed'
+    label_list
   end
 
   def book_create
-    label = add_label('Book')
-    author = add_author
-    genre = add_genre('book')
-    print 'What\'s the state of the Book Cover? [good/bad]: '
-    cover_state = gets.chomp.downcase
-    print 'Insert Book Publisher? '
-    publisher = gets.chomp
-    print 'Insert Publishing date? [year/month/day] (e.g 1937/11/12): '
-    published_date = gets.chomp
-    book = Book.new(publisher, cover_state, published_date)
-    label.add_item(book)
-    genre.add_item(book)
-    author.add_item(book)
-    @books << book
-    @labels << label
-    @genres << genre
-    @authors << author
-    puts "\n The book '#{label.title}' by #{author.first_name} #{author.last_name} was created successfully!✅ "
+    create_book
   end
 
   def add_label(thing)
@@ -112,6 +99,23 @@ class App
           read_genre(ary)
         when 'author'
           read_author(ary)
+        end
+      else
+        File.write("./storage/#{file_name}.json", '[]')
+      end
+    end
+  end
+
+  def read_booklabel
+    instance_variables.each do |var|
+      file_name = var.to_s.chomp('_list').delete('@')
+      if File.exist?("./storage/#{file_name}.json") && File.read("./storage/#{file_name}.json") != ''
+        ary = JSON.parse(File.read("./storage/#{file_name}.json"))
+        case file_name
+        when 'book'
+          read_book(ary)
+        when 'label'
+          read_label(ary)
         end
       else
         File.write("./storage/#{file_name}.json", '[]')

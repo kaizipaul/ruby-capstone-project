@@ -112,7 +112,7 @@ class App
 
   def read_music(file)
     puts
-    puts 'MUSIC ALBUMS'
+    puts '=====================  MUSIC ALBUMS  ====================='
     puts
     file.each do |el|
       music_id = el['value']['id']
@@ -129,7 +129,7 @@ class App
 
   def read_genre(file)
     puts
-    puts 'GENRES'
+    puts '=====================     GENRES     ====================='
     puts
     file.each do |el|
       genre_name = el['value']['name']

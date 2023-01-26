@@ -1,9 +1,9 @@
 require_relative './book_methods'
 
 def read_book(file)
-  puts ''
-  puts '--- BOOKS ---'
-  puts ''
+  puts
+  puts '=====================      BOOKS     ====================='
+  puts
   file.each do |elem|
     book_id = elem['value']['id']
     book_publisher = elem['value']['publisher']
@@ -16,9 +16,9 @@ def read_book(file)
 end
 
 def read_label(file)
-  puts ''
-  puts '--- LABEL ---'
-  puts ''
+  puts
+  puts '=====================     LABELS     ====================='
+  puts
   file.each do |el|
     label_title = el['value']['title']
     puts "Label: #{label_title}"

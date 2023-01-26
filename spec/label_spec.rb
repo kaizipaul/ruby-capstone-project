@@ -21,13 +21,13 @@ describe 'Unit testing for Label Class' do
 
   context 'Label title' do
     it 'should be "Gift"' do
-      expect(@author.title).to eql 'Gift'
+      expect(@label.title).to eql 'Gift'
     end
   end
 
   context 'Label Color' do
     it 'should be "Red"' do
-      expect(@author.color).to eql 'Red'
+      expect(@label.color).to eql 'Red'
     end
   end
 end

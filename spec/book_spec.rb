@@ -27,7 +27,7 @@ describe 'Unit testing for Book Class' do
 
   context 'Cover state' do
     it 'should be "good"' do
-      expect(@author.cover_state).to eql 'good'
+      expect(@book.cover_state).to eql 'good'
     end
   end
 end

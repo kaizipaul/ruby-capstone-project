@@ -82,6 +82,8 @@ class App
           read_music(ary)
         when 'game'
           read_game(ary)
+        when 'label'
+          read_label(ary)
         end
       else
         File.write("./storage/#{file_name}.json", '[]')
@@ -99,23 +101,8 @@ class App
           read_genre(ary)
         when 'author'
           read_author(ary)
-        end
-      else
-        File.write("./storage/#{file_name}.json", '[]')
-      end
-    end
-  end
-
-  def read_booklabel
-    instance_variables.each do |var|
-      file_name = var.to_s.chomp('_list').delete('@')
-      if File.exist?("./storage/#{file_name}.json") && File.read("./storage/#{file_name}.json") != ''
-        ary = JSON.parse(File.read("./storage/#{file_name}.json"))
-        case file_name
         when 'book'
           read_book(ary)
-        when 'label'
-          read_label(ary)
         end
       else
         File.write("./storage/#{file_name}.json", '[]')

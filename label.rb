@@ -1,4 +1,6 @@
-class Label
+require_relative './item'
+
+class Label < Item
   attr_accessor :title, :color
   attr_reader :id, :items
 

@@ -1,4 +1,4 @@
-require_relative '../genre'
+require_relative '../src/genre'
 
 describe 'Unit Tests for Genre Class' do
   before :each do

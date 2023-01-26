@@ -1,4 +1,4 @@
-require_relative '../game'
+require_relative '../src/game'
 
 describe 'Unit testing for Game Class' do
   before :each do

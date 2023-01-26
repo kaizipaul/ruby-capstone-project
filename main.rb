@@ -7,7 +7,6 @@ def main
   app = App.new
   Dir.exist?('./storage') ? app.read_files : nil
   Dir.exist?('./storage') ? app.read_files2 : nil
-  Dir.exist?('./storage') ? app.read_booklabel : nil
   loop do
     menu(app)
   end

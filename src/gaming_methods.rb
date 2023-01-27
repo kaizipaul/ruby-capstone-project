@@ -27,3 +27,13 @@ def add_game(multiplayer, last_played_at, publish_date)
   new_game = Game.new(multiplayer, last_played_at, publish_date)
   @game_list << new_game
 end
+
+def list_genres
+  if @genre_list.empty?
+    puts 'Genre list is empty'
+  else
+    @genre_list.each_with_index do |genre, index|
+      puts "(#{index}) Genre Name: \"#{genre.name}\""
+    end
+  end
+end

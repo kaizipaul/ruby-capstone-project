@@ -65,7 +65,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd school-library
-  git clone git@github.com:kaizipaul/school-library.git
+  git clone git@github.com:kaizipaul/ruby-capstone-project.git
 ```
 
 ### Install
@@ -105,6 +105,7 @@ Example command:
 👤 **Paul Kaizirege Vedasto**
 
 - GitHub: [GitHub](https://github.com/kaizipaul)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaizipaul/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -114,9 +115,6 @@ Example command:
 
 > Features to add to the project.
 
-- [ ] **[SET UP ASSOCIATIONS]**
-- [ ] **[ADD BASIC UI]**
-- [ ] **[REFACTOR CODE]**
 
 
 <!-- CONTRIBUTING -->
@@ -140,10 +138,6 @@ If you like this project...
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
-
-- **Do I have to have any previous knowledge about ruby to use this project?**
-
-  - No!
 
 - **How to use this project?**
 

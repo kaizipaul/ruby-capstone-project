@@ -1,4 +1,4 @@
-require_relative '../author'
+require_relative '../src/author'
 
 describe 'Unit testing for Author Class' do
   before :each do

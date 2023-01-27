@@ -1,7 +1,7 @@
-require_relative './app'
-require_relative './menu'
-require_relative './game_file'
-require_relative './book_data'
+require_relative './src/app'
+require_relative './src/menu'
+require_relative './src/game_file'
+require_relative './src/book_data'
 
 def main
   app = App.new

@@ -1,4 +1,4 @@
-require_relative '../label'
+require_relative '../src/label'
 
 describe 'Unit testing for Label Class' do
   before :each do

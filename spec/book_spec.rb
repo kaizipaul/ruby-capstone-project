@@ -1,4 +1,4 @@
-require_relative '../book'
+require_relative '../src/book'
 
 describe 'Unit testing for Book Class' do
   before :each do

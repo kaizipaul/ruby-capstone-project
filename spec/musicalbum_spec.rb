@@ -1,4 +1,4 @@
-require_relative '../musicalbum'
+require_relative '../src/musicalbum'
 
 describe 'Unit Tests for MusicAlbum Class' do
   before :each do

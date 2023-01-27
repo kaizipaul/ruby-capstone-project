@@ -37,7 +37,7 @@ class App
   end
 
   def author_display
-    show_authors
+    list_authors
   end
 
   def book_display
